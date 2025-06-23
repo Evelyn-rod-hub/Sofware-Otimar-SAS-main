@@ -53,8 +53,8 @@ session_start();
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Reserva tu vuelo</a></li>
         <li><a href="#">Mis viajes</a></li>
-        <li><a href="pages/indextarapaca.html">Blogs</a></li>
-        <li><a href="pages/Bienvenida.html">Contacto</a></li>
+        <li><a href="pages/indextarapaca.php">Blogs</a></li>
+        <li><a href="pages/Bienvenida.php">Contacto</a></li>
         </ul>
     </div>
     </nav>

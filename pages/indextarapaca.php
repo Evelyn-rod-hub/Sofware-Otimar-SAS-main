@@ -22,13 +22,13 @@
 
     <nav>
         <ul>
-            <li class="nav-item"> <a href="../index.html">Inicio</a></li>
+            <li class="nav-item"> <a href="../index.php">Inicio</a></li>
             <li class="nav-item"> <a href="#">Reserva tu vuelo</a></li>
             <li class="nav-item"> <a href="#">Mis viajes</a></li>
             <li class="nav-item"> <a href="#">Blogs</a></li>
             <li class="nav-item"> <a href="#">Contacto</a></li>
-            <li class="nav-item"> <a href="Formlogin.html">Ingresa</a></li>
-            <li class="nav-item"> <a href="Formularioinicio.html">Registrate</a></li>
+            <li class="nav-item"> <a href="Formlogin.php">Ingresa</a></li>
+            <li class="nav-item"> <a href="Formularioinicio.php">Registrate</a></li>
         </ul>
         <div class="menu-bar">Menu
             <span class="hamburguer-icon">
