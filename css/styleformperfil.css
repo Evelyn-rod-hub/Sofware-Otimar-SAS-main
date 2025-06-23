@@ -1,0 +1,386 @@
+/* Estilos globales y reseteo */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Fondo degradado del body (tomado de tu código anterior) */
+    background: linear-gradient(#f2a20c, #f2cf1d, #607d3d, #244f28);
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Configuración Flexbox para el diseño principal (barra lateral y contenido) */
+    display: flex;
+    flex-direction: row; /* Elementos hijos (sidebar y main) se alinean horizontalmente */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Fuente global */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Calificación de caja crucial */
+    text-decoration: none; /* Elimina subrayado de enlaces por defecto */
+}
+
+/* Contenedor principal de la página (abarca sidebar y main content) */
+.page-wrapper {
+    display: flex;
+    flex-grow: 1; /* Permite que ocupe el espacio disponible en el body */
+    gap: 20px; /* Espacio entre la barra lateral y el contenido principal */
+    padding: 20px; /* Relleno alrededor de todo el contenido */
+    align-items: flex-start; /* Alinea los ítems al inicio del eje cruzado (arriba) */
+}
+
+/* --- Estilos de la Barra Lateral (Sidebar) --- */
+.sidebar {
+    flex-basis: 250px; /* Ancho fijo para la barra lateral */
+    flex-shrink: 0; /* Evita que la barra lateral se encoja */
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    color: #333;
+}
+
+.sidebar-header {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 20px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.sidebar-nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center; /* Alinea icono y texto verticalmente */
+    padding: 12px 20px;
+    color: #555;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al pasar el ratón */
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+    width: 20px; /* Asegura un ancho fijo para los iconos */
+    text-align: center;
+}
+
+.sidebar-nav li a .arrow {
+    margin-left: auto; /* Empuja la flecha hacia la derecha */
+    font-size: 12px;
+    color: #ccc;
+}
+
+.sidebar-nav li a:hover {
+    background-color: #f0f0f0;
+}
+
+.sidebar-nav li.active a {
+    background-color: #e0f2f7; /* Fondo azul claro para el ítem activo */
+    color: #007bff; /* Texto azul para el ítem activo */
+    border-left: 4px solid #007bff; /* Borde azul a la izquierda para el ítem activo */
+    padding-left: 16px; /* Ajusta el padding por el borde añadido */
+    font-weight: bold;
+}
+
+/* --- Estilos del Contenido Principal (Main Content) --- */
+.logo {
+    /*acerca del logo */
+    width: 200px;
+    font-display: block;
+    margin: 20px;
+    margin-top: 10%;
+}
+.main-content {
+    flex-grow: 1; /* Ocupa el espacio restante horizontalmente */
+    display: flex;
+    flex-direction: column; /* Las tarjetas se apilan verticalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.main-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Texto blanco para el encabezado principal */
+    text-align: right;
+    padding-right: 20px; /* A juego con el padding de las tarjetas */
+}
+
+/* --- Estilos de las Tarjetas de Perfil (.profile-card) --- */
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ocupa todo el ancho del main-content */
+}
+
+.profile-card h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 25px;
+    display: flex; /* Para alinear el avatar y el texto */
+    align-items: center; /* Centra verticalmente el avatar y el texto */
+    padding-bottom: 15px; /* Espacio debajo del título antes de la línea */
+    border-bottom: 1px solid #eee; /* Línea divisoria debajo del título */
+}
+
+.profile-card h3 { /* Estilo para "Datos de contacto" */
+    font-size: 18px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-card .avatar-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Círculo perfecto */
+    background-color: #007bff; /* Fondo azul */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0; /* Evita que el avatar se encoja */
+}
+
+/* --- Diseño de Filas de Formulario (Columnas) --- */
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    gap: 20px; /* Espacio entre los grupos de formulario */
+    margin-bottom: 15px; /* Espacio entre las filas */
+}
+
+.form-group {
+    flex: 1; /* Permite que cada grupo ocupe espacio equitativo */
+    min-width: 280px; /* Ancho mínimo para cada columna antes de envolverse */
+    display: flex;
+    flex-direction: column; /* Etiqueta encima del input */
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* --- Estilos de Campos de Entrada (.input-field-group) --- */
+.input-field-group {
+    display: flex;
+    align-items: center; /* Centra el contenido (icono, input) verticalmente */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #f8f8f8; /* Fondo claro para los inputs */
+}
+
+.input-field-group i {
+    color: #888;
+    margin-right: 10px;
+}
+
+.error {
+    width: 200%;
+    text-align: center;
+    margin: auto;
+    color: #e65100;
+    padding-top: 20px;
+}
+
+.input-field-group input,
+.input-field-group select {
+    flex: 1; /* Permite que el input/select ocupe el espacio restante */
+    padding: 5px 0;
+    border: none; /* Elimina el borde nativo */
+    outline: none; /* Elimina el contorno al enfocar */
+    background-color: transparent; /* Fondo transparente para heredar del padre */
+    font-size: 15px;
+    color: #333;
+}
+/* Estilo para el placeholder de los inputs */
+input::placeholder {
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* Estilo para el selector (dropdown) */
+select {
+    /* Resetear estilos predeterminados del navegador para consistencia */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Añadir una flecha personalizada SVG */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23888888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 30px; /* Dejar espacio para la flecha */
+}
+
+/* Diseño específico para los campos de fecha (DD / MM / AAAA) */
+.date-fields {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%; /* Importante para las entradas internas para llenar el espacio */
+}
+.date-fields input {
+    text-align: center;
+    width: 40px;/* Ancho pequeño predeterminado */
+}
+
+/* Anchos específicos para entradas de fecha si es necesario, o dejar que flex lo maneje */
+#diaNacimiento { width: 40px; }
+#mesNacimiento { width: 40px; }
+#anioNacimiento { width: 60px; }
+
+.date-fields span {
+    color: #888;
+}
+
+/* Estilos para las opciones de género (radio buttons) */
+.gender-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+    height: 100%; /* Para que los radios se centren verticalmente en el form-group */
+}
+.gender-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.gender-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff; /* Color temático para el radio button */
+    cursor: pointer;
+}
+
+/* Estilo para el campo de teléfono con bandera */
+.phone-input-group {
+    display: flex; /* Permite alinear el select, la bandera y el input horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #f8f8f8;
+    flex-grow: 1; /* Si está dentro de un form-group */
+}
+.phone-input-group select {
+    /* Estilos para el select dentro de este grupo */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px;
+    color: #333;
+    /* Resetear estilos predeterminados del navegador para consistencia */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 10px; /* Espacio antes de la bandera */
+    cursor: pointer;
+}
+.phone-input-group img {
+    width: 24px; /* Ancho de la bandera */
+    height: 16px; /* Alto de la bandera */
+    margin-right: 8px; /* Espacio a la derecha de la bandera */
+    border: 1px solid #eee; /* Borde sutil para la bandera */
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.phone-input-group input[type="tel"] {
+    /* Estilos para el input de teléfono */
+    flex: 1; /* Permite que el input ocupe el espacio restante */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    font-size: 15px;
+    color: #333;
+}
+/* --- Estilos de Botones --- */
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    margin-top: 25px;
+}
+
+.button {
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    border: none; /* Elimina el borde predeterminado del botón */
+}
+
+.button.primary {
+    background-color: #F2CF1D; /* Amarillo */
+    color: #555; /* Texto oscuro sobre amarillo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.button.primary:hover {
+    background-color: #e0be0e; /* Amarillo más oscuro al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo para el texto "Mostrar" en los campos de contraseña */
+.password-toggle {
+    font-size: 14px;
+    color: #007bff; /* Color azul para el texto "Mostrar" */
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0;
+    user-select: none; /* Evita que el texto se pueda seleccionar */
+}
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 768px) {
+    .page-wrapper {
+        flex-direction: column; /* Apila la barra lateral y el contenido verticalmente */
+        padding: 15px;
+    }
+
+    .sidebar {
+        flex-basis: auto; /* Permite que la barra lateral ajuste su ancho */
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main-header {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Apila los grupos de formulario verticalmente en pantallas pequeñas */
+        gap: 15px;
+    }
+    .form-group {
+        min-width: unset; /* Elimina la restricción de ancho mínimo */
+        width: 100%;
+    }
+
+    .button-group {
+        justify-content: center; /* Centra los botones en pantallas pequeñas */
+    }
+}
