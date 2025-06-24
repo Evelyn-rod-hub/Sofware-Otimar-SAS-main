@@ -2,12 +2,15 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otimar S.A.S-Tarapacá</title>
+    <title>Otimar S.A.S</title>
+    <link rel="icon" type="image/jpg" href="Img/favicon.jpg" />
 
+    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
     <meta name="viewport"
@@ -16,26 +19,8 @@
 
 <body>
 
-    <header>
-        <img class="logo" src="../Img/logo_otimar.png" alt="">
-    </header>
-
-    <nav>
-        <ul>
-            <li class="nav-item"> <a href="../index.php">Inicio</a></li>
-            <li class="nav-item"> <a href="#">Reserva tu vuelo</a></li>
-            <li class="nav-item"> <a href="#">Mis viajes</a></li>
-            <li class="nav-item"> <a href="#">Blogs</a></li>
-            <li class="nav-item"> <a href="#">Contacto</a></li>
-            <li class="nav-item"> <a href="Formlogin.php">Ingresa</a></li>
-            <li class="nav-item"> <a href="Formularioinicio.php">Registrate</a></li>
-        </ul>
-        <div class="menu-bar">Menu
-            <span class="hamburguer-icon">
-                <i class="large material-icons">dehaze</i>
-            </span>
-        </div>
-    </nav>
+    <?php session_start(); ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/Sofware-Otimar-SAS-main/includes/nav.php'; ?>
 
     <div class="container">
         <div class="section">
@@ -196,7 +181,7 @@
                         escondido de Tarapacá, Amazonas, Colombia.
 
                     </p>
-                    <a href="#" class="button">Reserva tu vuelo</a>
+                    <a href="/Sofware-Otimar-SAS-main/pages/FormReservaVuelo.html" class="button">Reserva tu vuelo</a>
                 </div>
             </aside>
         </div>
@@ -216,6 +201,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
 </body>
 

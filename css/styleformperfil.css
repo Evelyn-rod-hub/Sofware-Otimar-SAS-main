@@ -199,6 +199,13 @@ body {
     padding-top: 20px;
 }
 
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.9em;
+}
+
+
 .input-field-group input,
 .input-field-group select {
     flex: 1; /* Permite que el input/select ocupe el espacio restante */
@@ -312,6 +319,7 @@ select {
     font-size: 15px;
     color: #333;
 }
+
 /* --- Estilos de Botones --- */
 .button-group {
     display: flex;

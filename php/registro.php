@@ -3,6 +3,7 @@ require_once('db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
+    $genre = $_POST['genre'];
     $tipo_documento = $_POST['tipo_documento'];
     $numero_doc = $_POST['numero_doc'];
     $nacionalidad = $_POST['nacionalidad'];
@@ -26,15 +27,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Insertar nuevo usuario
             $stmt = $pdo->prepare("INSERT INTO users (
-                nombre, tipo_documento, numero_doc, nacionalidad,
+                nombre, genre, tipo_documento, numero_doc, nacionalidad,
                 celular, email, fecha_nacimiento, usuario, password
             ) VALUES (
-                :nombre, :tipo_documento, :numero_doc, :nacionalidad,
+                :nombre, :genre, :tipo_documento, :numero_doc, :nacionalidad,
                 :celular, :email, :fecha_nacimiento, :usuario, :password
             )");
 
             $stmt->execute([
                 'nombre' => $nombre,
+                'genre' => $genre,
                 'tipo_documento' => $tipo_documento,
                 'numero_doc' => $numero_doc,
                 'nacionalidad' => $nacionalidad,

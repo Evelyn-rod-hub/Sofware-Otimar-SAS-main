@@ -11,7 +11,6 @@ session_start();
 
     <title>Otimar S.A.S</title>
 
-    <link rel="stylesheet" href="css/styleprincipal.css">
     <link rel="icon" type="image/jpg" href="Img/favicon.jpg" />
 
     <!--Import Google Icon Font-->
@@ -31,34 +30,7 @@ session_start();
 
 <body>
 
-    <header>
-        <img class="logo" src="Img/logo_otimar.png" alt="">
-    </header>
-
-    <nav>
-    <div class="nav-wrapper teal darken-4">
-        <!-- PHP en lugar del logo -->
-        <a href="#" class="brand-logo right" style="padding-right: 20px; font-size: 15px;">
-        <?php if (isset($_SESSION['usuario'])): ?>
-            Bienvenido, <?= htmlspecialchars($_SESSION['usuario']) ?> </br>
-            <a href="php/logout.php" class="white-text" style="display: inline;">Cerrar sesión</a>
-        <?php else: ?>
-            <a href="pages/Formlogin.php" class="white-text" style="display: inline;">Iniciar sesión</a> 
-            <a href="pages/Formularioinicio.php" class="white-text" style="display: inline;">Registrarse</a>
-        <?php endif; ?>
-        </a>
-
-        <!-- Menú de navegación a la izquierda -->
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Reserva tu vuelo</a></li>
-        <li><a href="#">Mis viajes</a></li>
-        <li><a href="pages/indextarapaca.php">Blogs</a></li>
-        <li><a href="pages/Bienvenida.php">Contacto</a></li>
-        </ul>
-    </div>
-    </nav>
-
+    <?php include 'includes/nav.php'; ?>
 
 
     <!--Vuelos a Tarapacá,Reserva tu vuelo-->
@@ -72,20 +44,18 @@ session_start();
             </div>
             <div class="card-stacked"></div>
             <div class="card-content white-text">
-                <span class="card-title" size="4">Vuelos a Tarapacá</span>
+                <span class="card-title" size="4">Otimar SAS tus alas confiables en el Amazonas</span>
                 <h6 class="section">
+                    </br>
                     <p>
-                        <font size="4">Embarquese en un viaje inolvidable a Tarapacá, Amazonas, Colombia, un tesoro escondido en el corazón de la selva
-                        amazónica. Un lugar mágico donde la exuberancia natural se fusiona con la rica cultura indígena, creando una experiencia
-                        única e inolvidable. Tarapacá es un corregimiento ubicado en el departamento de Amazonas, Colombia. Se encuentra a 100
-                        metros sobre el nivel del mar y limita al norte con La Pedrera, al sur con los municipios de Leticia y Puerto Nariño, al
-                        oeste con Puerto Arica y el Perú y al este con Brasil. Es un lugar de gran belleza natural y cultural, con una rica
-                        historia y una población diversa.
+                        <font size="4">
+                            Conectamos Leticia con destinos mágicos como Tarapacá, La Pedrera y La Chorrera. Ya sea para explorar la selva virgen y sus culturas, admirar paisajes fluviales o descubrir secretos ancestrales, te llevamos con vuelos chárter seguros y eficientes, transportando tanto a
+                            pasajeros como la carga vital que impulsa la región. ¡Somos tu aventura y logística a solo un clic de distancia!
                         </font>
                     </p>
-                </h6>
-                <div class="card-action">
-                    <a href="#">Reserva tu vuelo</a>
+                </h6> </br>
+                <div class="card-action mx-0">
+                    <a href="pages/FormReservaVuelo.html">Reserva tu vuelo</a>
                 </div>
             </div>
         </div>
@@ -196,4 +166,5 @@ session_start();
     <script src="js/script.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
 </body>

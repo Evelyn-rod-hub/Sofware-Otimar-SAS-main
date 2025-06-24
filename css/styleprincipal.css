@@ -9,6 +9,10 @@ body {
     font-family: Helvetica;
 }
 
+.card .card-action{
+    padding: 16px 0px;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -63,7 +67,8 @@ nav{
 }
 
 .logo{
-    width: 175px;
+    width: 152px !important;
+    height: 70px;
     font-display: block;
     margin: auto;
 }

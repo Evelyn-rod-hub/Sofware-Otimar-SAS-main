@@ -2,29 +2,34 @@
 require_once('db.php');
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['usuario'];
-    $password = $_POST['password'];
+header('Content-Type: application/json'); // Indica que responderás JSON
 
-    // Buscar el usuario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST['usuario'] ?? '';
+    $password = $_POST['password'] ?? '';
+
     $stmt = $pdo->prepare("SELECT * FROM users WHERE usuario = :usuario");
     $stmt->execute(['usuario' => $usuario]);
 
     if ($stmt->rowCount() > 0) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Verificar contraseña
         if (password_verify($password, $user['password'])) {
             $_SESSION['usuario'] = $usuario;
-            setcookie("usuario", $usuario, time() + 3600); // 1 hora
-            header("Location: ../index.php");
+            setcookie("usuario", $usuario, time() + 3600, "/"); // cookie válida en todo el sitio
+
+            echo json_encode(['success' => true]);
             exit;
         } else {
-            echo "Contraseña incorrecta.";
+            echo json_encode(['success' => false, 'message' => 'Contraseña incorrecta.']);
+            exit;
         }
     } else {
-        echo "Usuario no encontrado.";
+        echo json_encode(['success' => false, 'message' => 'Usuario no encontrado.']);
+        exit;
     }
 }
-?>
 
+echo json_encode(['success' => false, 'message' => 'Método no permitido.']);
+exit;
+?>

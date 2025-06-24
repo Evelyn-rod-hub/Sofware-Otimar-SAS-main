@@ -36,6 +36,18 @@
                             <option value="DNI">DNI</option>
                             <option value="CPF">CPF</option>
                         </select>
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <label for="genre">Genero:</label>
+                        <div class="gender-options">
+                            <div class="gender-option">
+                                <input type="radio" id="masculino" name="genre" value="M" checked>
+                                <label for="masculino">Masculino</label>
+                            </div>
+                            <div class="gender-option">
+                                <input type="radio" id="femenino" name="genre" value="F">
+                                <label for="femenino">Femenino</label>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Número documento -->
