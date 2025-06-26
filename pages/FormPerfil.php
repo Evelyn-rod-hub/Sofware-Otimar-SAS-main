@@ -48,8 +48,8 @@ session_start();
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fas fa-sign-out-alt"></i>
-                            <span>Cerrar sesión</span>
+                            <a href="/Sofware-Otimar-SAS-main/php/logout.php">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
+                            
                         </a>
                     </li>
                 </ul>

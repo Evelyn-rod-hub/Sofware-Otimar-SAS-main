@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let esValido = true;
 
-        const correoRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+        const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!correoRegex.test(correo)) {
             alert('❌ Ingresa un correo electrónico válido.');
             esValido = false;

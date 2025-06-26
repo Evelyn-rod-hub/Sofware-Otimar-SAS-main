@@ -35,12 +35,12 @@ if (session_status() === PHP_SESSION_NONE) {
           <ul id="dropdown-perfil" class="dropdown-content">
             <li><a href="/Sofware-Otimar-SAS-main/pages/FormPerfil.php">Mi perfil</a></li>
             <li class="divider"></li>
-            <li><a href="php/logout.php">Cerrar sesión</a></li>
+            <li><a href="/Sofware-Otimar-SAS-main/php/logout.php">Cerrar sesión</a></li>
           </ul>
 
         <?php else: ?>
-          <li><a href="pages/Formlogin.php">Iniciar sesión</a></li>
-          <li><a href="pages/Formularioinicio.php">Registrarse</a></li>
+          <li><a href="/Sofware-Otimar-SAS-main/pages/Formlogin.php">Iniciar sesión</a></li>
+          <li><a href="/Sofware-Otimar-SAS-main/pages/Formularioinicio.php">Registrarse</a></li>
         <?php endif; ?>
       </ul>
     </div>
