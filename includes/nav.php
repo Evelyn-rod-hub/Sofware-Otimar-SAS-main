@@ -15,7 +15,7 @@ if (session_status() === PHP_SESSION_NONE) {
       <!-- Menú a la derecha -->
       <ul id="nav-mobile" class="right hide-on-med-and-down" style="line-height: 90px;">
         <li><a href="/Sofware-Otimar-SAS-main/index.php">Inicio</a></li>
-        <li><a href="/Sofware-Otimar-SAS-main/pages/FormReservaVuelo.html">Reserva tu vuelo</a></li>
+        <li><a href="/Sofware-Otimar-SAS-main/pages/FormReservaVuelo.php">Reserva tu vuelo</a></li>
         <li><a href="#">Mis viajes</a></li>
         <li><a href="/Sofware-Otimar-SAS-main/pages/indextarapaca.php">Blogs</a></li>
         <li><a href="/Sofware-Otimar-SAS-main/pages/Bienvenida.php">Contacto</a></li>

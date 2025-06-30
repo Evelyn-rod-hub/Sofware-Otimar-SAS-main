@@ -1,0 +1,1 @@
+Bienvenido al Software Otimar SAS, todos los recursos necesarios para crear nuevas paginas se encuentran en la carpeta formats, por favor seguir los formatos recomendados, al incluir un nuevo enlace, usar el formato del path completo, ej:  href="/Sofware-Otimar-SAS-main/css/style.css"

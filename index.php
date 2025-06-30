@@ -6,26 +6,20 @@ session_start();
 <html lang="es">
 
 <head>
+    <!-- metas-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- titulo -->
     <title>Otimar S.A.S</title>
-
-    <link rel="icon" type="image/jpg" href="Img/favicon.jpg" />
-
-    <!--Import Google Icon Font-->
+    <!--- Icono --->
+    <link rel="icon" type="image/jpg" href="/Sofware-Otimar-SAS-main/Img/favicon.jpg" />
+    <!-- Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
+    <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/styleprincipal.css">
-
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body>
@@ -55,7 +49,7 @@ session_start();
                     </p>
                 </h6> </br>
                 <div class="card-action mx-0">
-                    <a href="pages/FormReservaVuelo.html">Reserva tu vuelo</a>
+                    <a href="pages/FormReservaVuelo.php">Reserva tu vuelo</a>
                 </div>
             </div>
         </div>
